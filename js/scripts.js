@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $("#userNumbers").submit(function(event) {
-    debugger;
+
     var countTo = $("input#countTo").val();
     var countBy = $("input#countBy").val();
 
@@ -14,12 +14,13 @@ $(document).ready(function() {
     } else if (countTo < countBy) {
       alert("You're counting by a number greater than you're counting to.")
     } else {
-      var displayNum = 0;
+      var numberList = [];
+      var countNum = 0;
       for (var i = 0; i < countTo; i++) {
-        displayNum += countBy;
+        countNum += countBy;
+        numberList.push(countNum);
       }
-
-
+      $("#countList").text(numberList);
     }
 
     event.preventDefault();
