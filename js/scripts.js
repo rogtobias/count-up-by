@@ -15,8 +15,9 @@ $(document).ready(function() {
       alert("You're counting by a number greater than you're counting to.")
     } else {
       var numberList = [];
+      debugger;
       var countNum = 0;
-      for (var i = 0; i < countTo; i++) {
+      for (var i = 0; i < (countTo / countBy); i++) {
         countNum += countBy;
         numberList.push(countNum);
       }
