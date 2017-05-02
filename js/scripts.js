@@ -8,7 +8,9 @@ $(document).ready(function() {
     var countBy = parseInt(countBy);
 
     if (isNaN(countTo) || isNaN(countBy)) {
-      alert('Numbers only & no empty fields.');
+      alert("Numbers only & no empty fields.");
+    } else if ( countTo < 0 || countBy < 0) {
+      alert("Both fields need to be greater than 0.")
     } else {
       
     }
